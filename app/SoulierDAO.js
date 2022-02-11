@@ -1,6 +1,6 @@
 class SoulierDAO{
     lister(action){
-      fetch("https://xmbtkfs4xi.execute-api.us-east-1.amazonaws.com/default/lister", {mode:'cors'})
+      fetch("https://llnsnv1i2c.execute-api.us-east-1.amazonaws.com/default/lister", {mode:'cors'})
         .then(response => response.json())
         .then(data =>
           {
@@ -24,7 +24,7 @@ class SoulierDAO{
           });
     }
     chercher(id, action){
-      fetch("https://ulofr45hp0.execute-api.us-east-1.amazonaws.com/default/chercher-par-id" + '?id=' + id , {mode:'cors'})
+      fetch("https://ybox9a7zue.execute-api.us-east-1.amazonaws.com/default/chercher-par-id" + '?id=' + id , {mode:'cors'})
         .then(response => response.json())
         .then(data =>
           {
@@ -43,7 +43,7 @@ class SoulierDAO{
     }
     ajouter(soulier, action){
       console.log(JSON.stringify(soulier));
-      fetch("https://r6t9t63tck.execute-api.us-east-1.amazonaws.com/default/ajouter",
+      fetch("https://2cl9ugpgu6.execute-api.us-east-1.amazonaws.com/default/ajouter",
         {
           method: 'POST',
           headers: {

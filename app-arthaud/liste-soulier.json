@@ -1,0 +1,5 @@
+[{"nom":"SuperFast","marque":"Geox","description":"les chaussures qui respirent","couleur":"bleu","materiaux":"plastique 90%, coton 10%","pourQui":"enfant","pointure":"32-37","fermeture":"zip","id":0},
+    {"nom":"Air Max 97","marque":"Nike","description":"Ceci est une chaussure Nike","couleur":"rouge","materiaux":"plastique 80%, coton 20%","pourQui":"homme","pointure":"40-45","fermeture":"lacet","id":1},
+    {"nom":"SuperStar","marque":"adidas","description":"Classique d'adidas","couleur":"bleu","materiaux":"plastique 30%, suede 40%, cuir 30%","pourQui":"femme","pointure":"34-42","fermeture":"lacet","id":2},
+    {"nom":"bluefruit","marque":"souvenir","description":"des chaussures planantes","couleur":"vert","materiaux":"suede 40%, coton 60%","pourQui":"enfant","pointure":"27-35","fermeture":"zip","id":3},
+    {"nom":"BigShoes","marque":"BigFoot","description":"des grandes chaussures pour des grands pieds","couleur":"noir","materiaux":"cuir 80%, plastique 20%","pourQui":"homme","pointure":"42-49","fermeture":"zip","id":4}]
