@@ -18,13 +18,13 @@
 
 </head>
 <body>
-  <div id="page-chargement-application">Chargement de l'application liste de pizzas</div>
+  <div id="page-chargement-application">Chargement de l'application de pizzeria</div>
 
 
   <script type="plain/text" id="html-vue-liste-pizza">
   <div class="page">
     <h1>Liste de pizzas</h1>
-    <a class="action" href="#ajouter-pizza">Ajouter un pizza</a>
+    <a class="action" href="#ajouter-pizza">Ajouter une pizza</a>
     <ul id="liste-pizza">
       <li><a href="#pizza/{Pizza.id}" class="liste-pizza-item">{Pizza.nom}</a></li>
     </ul>
@@ -36,25 +36,23 @@
     <h1>Pizza</h1>
     <h2 id="pizza-nom"></h2>
     <fieldset>
-      <legend>Marque</legend>
-      <p id="pizza-marque"></p>
+      <legend>base</legend>
+      <p id="pizza-base"></p>
     </fieldset>
     <fieldset>
       <legend>Description</legend>
       <p id="pizza-description"></p>
     </fieldset>
     <fieldset>
-      <legend>caracteristique du pizza</legend>
-      <h3>Couleur :</h3>
-      <p id="pizza-couleur"></p>
-      <h3>Matériaux :</h3>
-      <p id="pizza-materiaux"></p>
-      <h3>Pour Qui :</h3>
-      <p id="pizza-pourQui"></p>
-      <h3>Pointure :</h3>
-      <p id="pizza-pointure"></p>
-      <h3>Fermeture :</h3>
-      <p id="pizza-fermeture"></p>
+      <legend>Details de la pizza</legend>
+      <h3>Ingrédients :</h3>
+      <p id="pizza-ingredients"></p>
+      <h3>Prix Petite :</h3>
+      <p id="pizza-prixPetite"></p>
+      <h3>Prix Moyenne :</h3>
+      <p id="pizza-prixMoyenne"></p>
+      <h3>Prix grande :</h3>
+      <p id="pizza-prixGrande"></p>
     </fieldset>
     <a href="#" class="action">Revenir &agrave; la liste</a>
 
@@ -63,47 +61,43 @@
 
   <script type="plain/text" id="html-vue-ajouter-pizza">
   <div class="page">
-    <h1>Ajouter un pizza de Noël</h1>
+    <h1>Ajouter une pizza</h1>
     <form id="formulaire-ajouter">
       <fieldset>
-        <legend>Identification du pizza</legend>
+        <legend>Identification de pizza</legend>
         <div>
           <label for="pizza-nom">Nom</label>
           <input type="text" id="pizza-nom"/>
         </div>
         <div>
-          <label for="pizza-marque">Marque</label>
-          <input type="text" id="pizza-marque"/>
+          <label for="pizza-base">Base</label>
+          <input type="text" id="pizza-base"/>
         </div>
       </fieldset>
       <fieldset>
-        <legend>D&eacute;tails sur le pizza</legend>
+        <legend>Details de la pizza</legend>
         <div>
           <label for="pizza-description">Description</label>
           <textarea id="pizza-description"></textarea>
         </div>
       </fieldset>
       <fieldset>
-        <legend>caracteristique du pizza</legend>
+        <legend>caracteristiques de la pizza</legend>
         <div>
-          <label for="pizza-pointure">Pointure</label>
-          <input type="text" id="pizza-pointure"></input>
+            <label for="pizza-ingredients">Ingrédients</label>
+            <input type="text" id="pizza-ingredients"></input>
+          </div>
+        <div>
+          <label for="pizza-prixPetite">Prix petite</label>
+          <input type="text" id="pizza-prixPetite"></input>
         </div>
         <div>
-            <label for="pizza-pourQui">Pour qui</label>
-            <input type="text" id="pizza-pourQui"></input>
+            <label for="pizza-prixMoyenne">Prix moyenne</label>
+            <input type="text" id="pizza-prixMoyenne"></input>
           </div>
           <div>
-            <label for="pizza-couleur">Couleur</label>
-            <input type="text" id="pizza-couleur"></input>
-          </div>
-          <div>
-            <label for="pizza-materiaux">Materiaux</label>
-            <input type="text" id="pizza-materiaux"></input>
-          </div>
-          <div>
-            <label for="pizza-fermeture">Fermeture</label>
-            <input type="text" id="pizza-fermeture"></input>
+            <label for="pizza-prixGrande">Prix grande</label>
+            <input type="text" id="pizza-prixGrande"></input>
           </div>
       </fieldset>
       <input class="action" type="submit" id="enregistrer" value="Enregistrer"/>

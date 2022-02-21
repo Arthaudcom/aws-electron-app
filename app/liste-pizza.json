@@ -1,0 +1,4 @@
+[{"nom":"Calzone","base":"Sauce tomate","description":"pizza pliée en 2","ingredients":"farine, eau, sel, sauce tomate, champignons, mozarella, basilic","prixPetite":"9€","prixMoyenne":"12€","prixGrande":"15€","id":0},
+    {"nom":"Espagnole","base":"Sauce tomate","description":"pizza à base de chorizo","ingredients":"farine, eau, sel, sauce tomate, chorizo, poivrons, olives","prixPetite":"8€","prixMoyenne":"11€","prixGrande":"14€","id":0},
+    {"nom":"Savoyarde","base":"crème fraîche","description":"pizza directement inspirée de la Savoie et de la tartiflette","ingredients":"farine, eau, sel, crème fraiche, pommes de terre, reblochon, lardons","prixPetite":"10€","prixMoyenne":"13€","prixGrande":"16€","id":0},
+    {"nom":"Orientale","base":"Sauce tomate","description":"pizza à base de merguez","ingredients":"farine, eau, sel, sauce tomate, merguez, poivrons, oignons","prixPetite":"8€","prixMoyenne":"11€","prixGrande":"14€","id":0}]

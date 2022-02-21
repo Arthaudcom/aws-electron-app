@@ -1,13 +1,12 @@
 class Pizza{
-  constructor(nom, marque, description, couleur, materiaux, pourQui = "Tous", pointure, fermeture, id = null){
+  constructor(nom, base, description, ingredients, prixPetite, prixMoyenne, prixGrande, id = null){
     this.nom = nom;
-    this.marque = marque;
+    this.base = base;
     this.description = description;
-    this.couleur = couleur;
-    this.materiaux = materiaux;
-    this.pourQui = pourQui;
-    this.pointure = pointure;
-    this.fermeture = fermeture;
+    this.ingredients = ingredients;
+    this.prixPetite = prixPetite;
+    this.prixMoyenne = prixMoyenne;
+    this.prixGrande = prixGrande;
     this.id = id;
   }
 

@@ -17,15 +17,14 @@ class VueAjouterPizza{
       evenement.preventDefault();
   
       let nom = document.getElementById("pizza-nom").value;
-      let marque = document.getElementById("pizza-marque").value;
+      let base = document.getElementById("pizza-base").value;
       let description = document.getElementById("pizza-description").value;
-      let couleur = document.getElementById("pizza-couleur").value;
-      let materiaux = document.getElementById("pizza-materiaux").value;
-      let fermeture = document.getElementById("pizza-fermeture").value;
-      let pourQui = document.getElementById("pizza-pourQui").value;
-      let pointure = document.getElementById("pizza-pointure").value;
+      let ingredients = document.getElementById("pizza-ingredients").value;
+      let prixPetite = document.getElementById("pizza-prixPetite").value;
+      let prixMoyenne = document.getElementById("pizza-prixMoyenne").value;
+      let prixGrande = document.getElementById("pizza-prixGrande").value;
   
-      this.ajouterPizza(new Pizza(nom, marque, description, couleur, materiaux, pourQui, pointure, fermeture,  null));
+      this.ajouterPizza(new Pizza(nom, base, description, ingredients, prixPetite, prixMoyenne, prixGrande,  null));
   
     }
   

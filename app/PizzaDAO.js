@@ -8,13 +8,12 @@ class PizzaDAO{
             let listePizza = [];
             for(let position in data){
               let pizza = new Pizza(data[position].nom,
-                                        data[position].marque,
+                                        data[position].base,
                                         data[position].description,
-                                        data[position].couleur,
-                                        data[position].materiaux,
-                                        data[position].pourQui,
-                                        data[position].pointure,
-                                        data[position].fermeture,
+                                        data[position].ingredients,
+                                        data[position].prixPetite,
+                                        data[position].prixMoyenne,
+                                        data[position].prixGrande,
                                         data[position].id);
   
               console.log(pizza);
@@ -30,13 +29,12 @@ class PizzaDAO{
           {
             console.log(data);
             let pizza = new Pizza(data.nom,
-                                        data.marque,
+                                        data.base,
                                         data.description,
-                                        data.couleur,
-                                        data.materiaux,
-                                        data.pourQui,
-                                        data.pointure,
-                                        data.fermeture,
+                                        data.ingredients,
+                                        data.prixPetite,
+                                        data.prixMoyenne,
+                                        data.prixGrande,
                                         data.id);
             action(pizza);
           });

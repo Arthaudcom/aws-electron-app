@@ -13,6 +13,7 @@ class VuePizza{
       document.getElementById("pizza-nom").innerHTML = this.pizza.nom;
       document.getElementById("pizza-base").innerHTML = this.pizza.base;
       document.getElementById("pizza-description").innerHTML = this.pizza.description;
+      document.getElementById("pizza-ingredients").innerHTML = this.pizza.ingredients;
       document.getElementById("pizza-prixPetite").innerHTML = this.pizza.prixPetite;
       document.getElementById("pizza-prixMoyenne").innerHTML = this.prixMoyenne;
       document.getElementById("pizza-prixGrande").innerHTML = this.pizza.prixGrande;
