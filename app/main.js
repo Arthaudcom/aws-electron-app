@@ -22,7 +22,7 @@ function createWindow () {
 
   // Affiche maximisé par défaut
   // https://stackoverflow.com/a/45906784
-  win.webContents.openDevTools();
+  //win.webContents.openDevTools();
   win.maximize();
   win.show();
 
