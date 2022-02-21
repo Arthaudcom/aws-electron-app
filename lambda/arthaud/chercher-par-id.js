@@ -11,30 +11,30 @@ exports.handler = async (event) => {
     headers: {
       "Access-Control-Allow-Origin" : "*"
     }, 
-    body: 'Vous devez donner un id de soulier'
+    body: 'Vous devez donner un id de pizza'
   };
   if (id == null) {
     return response;
   }
 
   const params = {
-      Bucket: "app-soulier-arthaud",
-      Key: "liste-soulier.json",
+      Bucket: "app-pizza-arthaud",
+      Key: "liste-pizza.json",
   };
 
   const data = await s3.getObject(params).promise();
   console.log("Raw text:\n" + data.Body.toString('utf-8'));
-  const listeSoulierJson = data.Body.toString('utf-8');
-  const listeSoulier = JSON.parse(listeSoulierJson);
+  const listePizzaJson = data.Body.toString('utf-8');
+  const listePizza = JSON.parse(listePizzaJson);
 
-  let soulier = listeSoulier.find(soulier => soulier.id == id);
+  let pizza = listePizza.find(pizza => pizza.id == id);
 
   response = {
       statusCode: 200,
       headers: {
         "Access-Control-Allow-Origin" : "*"
       }, 
-      body: JSON.stringify(soulier).toString('utf-8')
+      body: JSON.stringify(pizza).toString('utf-8')
   };
   
   return response;

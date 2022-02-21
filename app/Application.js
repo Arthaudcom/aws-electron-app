@@ -1,17 +1,17 @@
 class Application {
-  constructor(window, vueListeSoulier, vueSoulier, vueAjouterSoulier, soulierDAO){
+  constructor(window, vueListePizza, vuePizza, vueAjouterPizza, pizzaDAO){
 
     this.window = window;
 
-    this.vueListeSoulier = vueListeSoulier;
+    this.vueListePizza = vueListePizza;
 
-    this.vueSoulier = vueSoulier;
+    this.vuePizza = vuePizza;
 
-    this.vueAjouterSoulier = vueAjouterSoulier;
-    // C'est l'équivalent de function(soulier){this.ajouterSoulier(soulier)}
-    this.vueAjouterSoulier.initialiserAjouterSoulier(soulier =>this.ajouterSoulier(soulier));
+    this.vueAjouterPizza = vueAjouterPizza;
+    // C'est l'équivalent de function(pizza){this.ajouterPizza(pizza)}
+    this.vueAjouterPizza.initialiserAjouterPizza(pizza =>this.ajouterPizza(pizza));
 
-    this.soulierDAO = soulierDAO;
+    this.pizzaDAO = pizzaDAO;
 
     // C'est l'équivalent de function(){this.naviguer()}
     this.window.addEventListener("hashchange", () =>this.naviguer());
@@ -24,42 +24,42 @@ class Application {
 
     if(!hash){
 
-      this.soulierDAO.lister((listeSoulier) => this.afficherNouvelleListeSoulier(listeSoulier));
+      this.pizzaDAO.lister((listePizza) => this.afficherNouvelleListePizza(listePizza));
 
-    }else if(hash.match(/^#ajouter-soulier/)){
+    }else if(hash.match(/^#ajouter-pizza/)){
 
-      this.vueAjouterSoulier.afficher();
+      this.vueAjouterPizza.afficher();
 
     }else{
 
-      let navigation = hash.match(/^#soulier\/([0-9]+)/);
-      let idSoulier = navigation[1];
+      let navigation = hash.match(/^#pizza\/([0-9]+)/);
+      let idPizza = navigation[1];
 
-      this.soulierDAO.chercher(idSoulier, (soulier) => this.afficherNouveauSoulier(soulier));
+      this.pizzaDAO.chercher(idPizza, (pizza) => this.afficherNouveauPizza(pizza));
     }
   }
 
-  afficherNouvelleListeSoulier(listeSoulier){
+  afficherNouvelleListePizza(listePizza){
 
-    console.log(listeSoulier);
-    this.vueListeSoulier.initialiserListeSoulier(listeSoulier);
-    this.vueListeSoulier.afficher();
+    console.log(listePizza);
+    this.vueListePizza.initialiserListePizza(listePizza);
+    this.vueListePizza.afficher();
   }
 
-  afficherNouveauSoulier(soulier){
-    console.log(soulier);
-    this.vueSoulier.initialiserSoulier(soulier);
-    this.vueSoulier.afficher();
+  afficherNouveauPizza(pizza){
+    console.log(pizza);
+    this.vuePizza.initialiserPizza(pizza);
+    this.vuePizza.afficher();
   }
 
-  ajouterSoulier(soulier){
-    this.soulierDAO.ajouter(soulier, () => this.afficherListeSoulier());
+  ajouterPizza(pizza){
+    this.pizzaDAO.ajouter(pizza, () => this.afficherListePizza());
   }
 
-  afficherListeSoulier(){
+  afficherListePizza(){
     this.window.location.hash = "#";
   }
 }
 
-new Application(window, new VueListeSoulier(), new VueSoulier(), new VueAjouterSoulier(), new SoulierDAO());
+new Application(window, new VueListePizza(), new VuePizza(), new VueAjouterPizza(), new PizzaDAO());
 

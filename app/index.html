@@ -1,14 +1,14 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <title>Liste de souliers</title>
+  <title>Liste de pizzas</title>
   <link rel="stylesheet" href="decoration/application.css">
   <style></style>
-  <script src="Soulier.js"></script>
-  <script src="SoulierDAO.js"></script>
-  <script src="VueSoulier.js"></script>
-  <script src="VueListeSoulier.js"></script>
-  <script src="VueAjouterSoulier.js"></script>
+  <script src="Pizza.js"></script>
+  <script src="PizzaDAO.js"></script>
+  <script src="VuePizza.js"></script>
+  <script src="VueListePizza.js"></script>
+  <script src="VueAjouterPizza.js"></script>
   <!--
   https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#Script_loading_strategies
   Scripts loaded using the defer attribute will run in the order they appear
@@ -18,92 +18,92 @@
 
 </head>
 <body>
-  <div id="page-chargement-application">Chargement de l'application liste de souliers</div>
+  <div id="page-chargement-application">Chargement de l'application liste de pizzas</div>
 
 
-  <script type="plain/text" id="html-vue-liste-soulier">
+  <script type="plain/text" id="html-vue-liste-pizza">
   <div class="page">
-    <h1>Liste de souliers</h1>
-    <a class="action" href="#ajouter-soulier">Ajouter un soulier</a>
-    <ul id="liste-soulier">
-      <li><a href="#soulier/{Soulier.id}" class="liste-soulier-item">{Soulier.nom}</a></li>
+    <h1>Liste de pizzas</h1>
+    <a class="action" href="#ajouter-pizza">Ajouter un pizza</a>
+    <ul id="liste-pizza">
+      <li><a href="#pizza/{Pizza.id}" class="liste-pizza-item">{Pizza.nom}</a></li>
     </ul>
   </div>
   </script>
 
-  <script type="plain/text" id="html-vue-soulier">
+  <script type="plain/text" id="html-vue-pizza">
   <div class="page">
-    <h1>Soulier</h1>
-    <h2 id="soulier-nom"></h2>
+    <h1>Pizza</h1>
+    <h2 id="pizza-nom"></h2>
     <fieldset>
       <legend>Marque</legend>
-      <p id="soulier-marque"></p>
+      <p id="pizza-marque"></p>
     </fieldset>
     <fieldset>
       <legend>Description</legend>
-      <p id="soulier-description"></p>
+      <p id="pizza-description"></p>
     </fieldset>
     <fieldset>
-      <legend>caracteristique du soulier</legend>
+      <legend>caracteristique du pizza</legend>
       <h3>Couleur :</h3>
-      <p id="soulier-couleur"></p>
+      <p id="pizza-couleur"></p>
       <h3>Matériaux :</h3>
-      <p id="soulier-materiaux"></p>
+      <p id="pizza-materiaux"></p>
       <h3>Pour Qui :</h3>
-      <p id="soulier-pourQui"></p>
+      <p id="pizza-pourQui"></p>
       <h3>Pointure :</h3>
-      <p id="soulier-pointure"></p>
+      <p id="pizza-pointure"></p>
       <h3>Fermeture :</h3>
-      <p id="soulier-fermeture"></p>
+      <p id="pizza-fermeture"></p>
     </fieldset>
     <a href="#" class="action">Revenir &agrave; la liste</a>
 
   </div>
   </script>
 
-  <script type="plain/text" id="html-vue-ajouter-soulier">
+  <script type="plain/text" id="html-vue-ajouter-pizza">
   <div class="page">
-    <h1>Ajouter un soulier de Noël</h1>
+    <h1>Ajouter un pizza de Noël</h1>
     <form id="formulaire-ajouter">
       <fieldset>
-        <legend>Identification du soulier</legend>
+        <legend>Identification du pizza</legend>
         <div>
-          <label for="soulier-nom">Nom</label>
-          <input type="text" id="soulier-nom"/>
+          <label for="pizza-nom">Nom</label>
+          <input type="text" id="pizza-nom"/>
         </div>
         <div>
-          <label for="soulier-marque">Marque</label>
-          <input type="text" id="soulier-marque"/>
-        </div>
-      </fieldset>
-      <fieldset>
-        <legend>D&eacute;tails sur le soulier</legend>
-        <div>
-          <label for="soulier-description">Description</label>
-          <textarea id="soulier-description"></textarea>
+          <label for="pizza-marque">Marque</label>
+          <input type="text" id="pizza-marque"/>
         </div>
       </fieldset>
       <fieldset>
-        <legend>caracteristique du soulier</legend>
+        <legend>D&eacute;tails sur le pizza</legend>
         <div>
-          <label for="soulier-pointure">Pointure</label>
-          <input type="text" id="soulier-pointure"></input>
+          <label for="pizza-description">Description</label>
+          <textarea id="pizza-description"></textarea>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>caracteristique du pizza</legend>
+        <div>
+          <label for="pizza-pointure">Pointure</label>
+          <input type="text" id="pizza-pointure"></input>
         </div>
         <div>
-            <label for="soulier-pourQui">Pour qui</label>
-            <input type="text" id="soulier-pourQui"></input>
+            <label for="pizza-pourQui">Pour qui</label>
+            <input type="text" id="pizza-pourQui"></input>
           </div>
           <div>
-            <label for="soulier-couleur">Couleur</label>
-            <input type="text" id="soulier-couleur"></input>
+            <label for="pizza-couleur">Couleur</label>
+            <input type="text" id="pizza-couleur"></input>
           </div>
           <div>
-            <label for="soulier-materiaux">Materiaux</label>
-            <input type="text" id="soulier-materiaux"></input>
+            <label for="pizza-materiaux">Materiaux</label>
+            <input type="text" id="pizza-materiaux"></input>
           </div>
           <div>
-            <label for="soulier-fermeture">Fermeture</label>
-            <input type="text" id="soulier-fermeture"></input>
+            <label for="pizza-fermeture">Fermeture</label>
+            <input type="text" id="pizza-fermeture"></input>
           </div>
       </fieldset>
       <input class="action" type="submit" id="enregistrer" value="Enregistrer"/>

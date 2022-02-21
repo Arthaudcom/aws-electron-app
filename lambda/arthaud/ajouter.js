@@ -7,10 +7,10 @@ const querystring = require('querystring');
 exports.handler = async (event) => {
   const postdata = querystring.parse(event.body);
   
-  let soulier = null;
-  let soulierjson = postdata["soulierjson"];
-  if(soulierjson){
-    soulier = JSON.parse(soulierjson);
+  let pizza = null;
+  let pizzajson = postdata["pizzajson"];
+  if(pizzajson){
+    pizza = JSON.parse(pizzajson);
   }
   
   let response = {
@@ -18,26 +18,26 @@ exports.handler = async (event) => {
     headers: {
       "Access-Control-Allow-Origin" : "*"
     },
-    body : "Pas de soulier reçu",
+    body : "Pas de pizza reçu",
   };
   
-  if (soulier == null) {
+  if (pizza == null) {
     return response;
   }
 
-  soulier.id = Date.now();
+  pizza.id = Date.now();
 
   const params = {
-      Bucket: "app-soulier-arthaud",
-      Key: "liste-soulier.json",
+      Bucket: "app-pizza-arthaud",
+      Key: "liste-pizza.json",
   };
 
   let data = await s3.getObject(params).promise();
-  let listeSoulierJson = data.Body.toString('utf-8');
-  const listeSoulier = JSON.parse(listeSoulierJson);
-  listeSoulier.push(soulier);
-  listeSoulierJson = JSON.stringify(listeSoulier);
-  params.Body  = listeSoulierJson;
+  let listePizzaJson = data.Body.toString('utf-8');
+  const listePizza = JSON.parse(listePizzaJson);
+  listePizza.push(pizza);
+  listePizzaJson = JSON.stringify(listePizza);
+  params.Body  = listePizzaJson;
   data = await s3.putObject(params).promise();
 
   response = {
@@ -45,7 +45,7 @@ exports.handler = async (event) => {
       headers: {
         "Access-Control-Allow-Origin" : "*"
       },
-      body: soulier.id
+      body: pizza.id
   };
 
   return response;

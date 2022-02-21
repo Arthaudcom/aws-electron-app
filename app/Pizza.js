@@ -1,4 +1,4 @@
-class Soulier{
+class Pizza{
   constructor(nom, marque, description, couleur, materiaux, pourQui = "Tous", pointure, fermeture, id = null){
     this.nom = nom;
     this.marque = marque;

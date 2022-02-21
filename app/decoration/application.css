@@ -27,17 +27,17 @@ html {
   font-size:48px;
 }
 
-#liste-soulier {
+#liste-pizza {
   list-style-type:none;
 }
 
-.liste-soulier-item {
+.liste-pizza-item {
   color:var(--theme-rouge);
   text-transform : capitalize;
   text-decoration:none;
 }
 
-#liste-soulier li {
+#liste-pizza li {
   position:relative;
   display:block;
   margin-bottom:0.25rem;
@@ -48,7 +48,7 @@ html {
   box-shadow: 2px 2px var(--theme-blanc);
 }
 
-#liste-soulier li::before {
+#liste-pizza li::before {
    content:"K";
    text-align:center;
    color:var(--theme-rouge);
